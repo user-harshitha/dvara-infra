@@ -1,0 +1,120 @@
+{
+  "attached_volumes_details": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "app_volume": [
+          "object",
+          {
+            "device": "string",
+            "id": "string",
+            "size": "number",
+            "type": "string"
+          }
+        ],
+        "appdata_volume": [
+          "object",
+          {
+            "device": "string",
+            "id": "string",
+            "size": "number",
+            "type": "string"
+          }
+        ],
+        "database_volume": [
+          "object",
+          {
+            "device": "string",
+            "id": "string",
+            "size": "number",
+            "type": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "app_volume": {
+        "device": "/dev/sdf",
+        "id": "vol-0af7e2e801666ab8e",
+        "size": 20,
+        "type": "standard"
+      },
+      "appdata_volume": {
+        "device": "/dev/sdg",
+        "id": "vol-0656c3b5b21673b91",
+        "size": 40,
+        "type": "standard"
+      },
+      "database_volume": {
+        "device": "/dev/sdh",
+        "id": "vol-0dffbcc7ce18356db",
+        "size": 50,
+        "type": "standard"
+      }
+    }
+  },
+  "instance_details": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "ami": "string",
+        "availability_zone": "string",
+        "id": "string",
+        "instance_type": "string",
+        "key_name": "string",
+        "private_ip": "string",
+        "public_ip": "string",
+        "subnet_id": "string",
+        "tags": [
+          "map",
+          "string"
+        ],
+        "vpc_security_group_ids": [
+          "set",
+          "string"
+        ]
+      }
+    ],
+    "value": {
+      "ami": "ami-04d143d89e43ce7fb",
+      "availability_zone": "ap-south-1a",
+      "id": "i-0c0cca44579f5bcd8",
+      "instance_type": "t3a.large",
+      "key_name": "ansible",
+      "private_ip": "10.23.5.61",
+      "public_ip": "",
+      "subnet_id": "subnet-09ffb189d6f69530a",
+      "tags": {
+        "BillableParty": "arvan",
+        "DNS_Name": "preprod-arvan.mmb.perdix.co",
+        "Name": "arvan preprod",
+        "ServerCategory": "Client-UAT"
+      },
+      "vpc_security_group_ids": [
+        "sg-0e7122c5bec08710b"
+      ]
+    }
+  },
+  "target_group_info": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "arn": "string",
+        "name": "string",
+        "port": "number",
+        "target_type": "string",
+        "vpc_id": "string"
+      }
+    ],
+    "value": {
+      "arn": "arn:aws:elasticloadbalancing:ap-south-1:203862109330:targetgroup/preprod-arvan-mmb-80tg/84bd4c8f1b359eaa",
+      "name": "preprod-arvan-mmb-80tg",
+      "port": 80,
+      "target_type": "instance",
+      "vpc_id": "vpc-0f6424f35dc01cb6c"
+    }
+  }
+}
